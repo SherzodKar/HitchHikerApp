@@ -1,0 +1,14 @@
+.row
+{
+    margin-bottom: 10px;
+}
+.row div{
+    font-size: 15px;
+}
+input{
+    border: 2px transparent white;
+    width: 90%;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px; 
+}

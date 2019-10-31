@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Links -->
+<link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/en-ca.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+ <link rel="stylesheet" href="css/addPost.css">
+
+ <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script> 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<title>HitchHickerApp</title>
+</head>
+<body>
+
+<!--<button type="button" class="btn btn-danger" id="signout">Sign Out</button>-->
+<!--<div id="menu">
+	<div class="hamburger">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="menu-inner">
+		
+		<ul>
+			<li><a href="home.html">Home Page</li>
+			<li>Search for a ride</li>
+			<li>Requested Rides</li>
+			<li>Planned Rides</li>
+			<li></li>
+		</ul>
+	</div>
+    
+	
+	<svg version="1.1" id="blob"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z"/>
+	</svg>
+</div>-->
+
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<center><h2>Make a Post</h2></center>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-3">
+				<span> Enter departure address: </span>
+			</div>
+			<div class="col-xs-9">
+				<input type="text" id="departure" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">
+				<span> Enter destination address: </span>
+			</div>
+			<div class="col-xs-9">
+				<input type="text" id="destination" class="form-control"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">
+				<span> Enter date: </span>
+			</div>
+			<div class='col-xs-6'>
+					<div class="form-group">
+						<div class='input-group date' id='datetimepicker1'>
+							<input type='text' class="form-control" id="datetime"/>
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</span>
+						</div>
+					</div>
+			</div>
+			<div class="col-xs-3"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">
+				<span> Enter your message to riders: </span>
+			</div>
+			<div class="col-xs-9">
+				<textarea type="text" class="form-control" rows="5" id="message"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">
+				<button type="button" class="btn btn-success" id="submit"> Submit </button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4c6119TFb_4ftoFUpMgSnxePZp44MPaI&callback&libraries=places" async defer></script>
+<script src="js/addPost.js"></script>
+</body>
+</html>
